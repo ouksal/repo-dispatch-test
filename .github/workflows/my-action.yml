@@ -1,0 +1,16 @@
+name: Actions Workflow
+
+on:
+  repository_dispatch:
+    "types": [build]
+  pull_request:
+    types: [closed, opened, assigned]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Files
+        run: |
+          pwd
+          ls
