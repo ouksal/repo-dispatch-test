@@ -11,5 +11,6 @@ jobs:
     steps:
       - name: List Files
         run: |
+          docker images
           pwd
           ls ~
