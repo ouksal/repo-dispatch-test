@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: List Files
         run: |
-          cd ../../public
+          mkdir sil && cd sil
+          touch sil.txt
           pwd
           ls ~
