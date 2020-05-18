@@ -1,0 +1,15 @@
+name: Actions Workflow
+
+on:
+  push:
+    paths:
+      - "**.js"
+      - "**.html"
+      - "**.css"
+
+jobs:
+  frontend-workflow:
+    runs-on: self-hosted
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v1

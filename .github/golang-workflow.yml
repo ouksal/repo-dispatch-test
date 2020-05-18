@@ -2,8 +2,8 @@ name: Actions Workflow
 
 on:
   push:
-    branches:
-      - master
+    paths:
+      - "**.go"
 
 jobs:
   run-github-actions:
@@ -17,7 +17,3 @@ jobs:
       - name: make docker container
         run: |
           docker run -d -p 80:80 -p 443:443 -v  cert-cache:/cert-cache  -v $(pwd)/target:/static    httpserver/https
-      - name: List Files
-        run: |
-          pwd
-          ls
