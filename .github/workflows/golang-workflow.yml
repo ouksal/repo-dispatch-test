@@ -11,11 +11,13 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v1
+      - name: clean running container if any
+        run: |
+          docker stop httpserver 2>/dev/null
+          docker rm httpserver 2>/dev/null
+          docker rmi httpserver/https 2>/dev/null
       - name: make docker image
         run: |
-          docker stop httpserver
-          docker rm httpserver
-          docker rmi httpserver/https
           docker build -t httpserver/https .
       - name: make docker container
         run: |
