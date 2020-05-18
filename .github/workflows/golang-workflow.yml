@@ -14,6 +14,7 @@ jobs:
       - name: clean running httpserver container if any
         run: |
           containerID="$(docker ps -q -f name=httpserver)"
+          echo "containerID=$containerID"
           if [ -n $containerID ]; then
               echo "masalah1"          
               docker stop httpserver
