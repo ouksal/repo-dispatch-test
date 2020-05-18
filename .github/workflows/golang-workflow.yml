@@ -15,11 +15,13 @@ jobs:
         run: |
           containerID="$(docker ps -q -f name=httpserver)"
           if [ -n containerID ]; then
+              echo "masalah1"          
               docker stop httpserver
-              echo ">>>>>>masallah"
+              echo "masalah2"              
               docker rm httpserver
               docker rmi httpserver/https
           fi
+          echo "masallah3"
       - name: make docker image
         run: |
           docker build -t httpserver/https .
