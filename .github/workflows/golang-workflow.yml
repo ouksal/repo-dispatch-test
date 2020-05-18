@@ -13,9 +13,10 @@ jobs:
         uses: actions/checkout@v1
       - name: clean running httpserver container if any
         run: |
-          containerID="$(docker ps -q -f name=httpserver)"
-          echo "containerID=$containerID"
-          if [ -n $containerID ]; then
+          containerID=$(docker ps -q -f name=httpserver)
+
+          if [  -n "$containerID" ] 
+          then
               echo "masalah1"          
               docker stop httpserver
               echo "masalah2"              
