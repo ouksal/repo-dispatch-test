@@ -15,8 +15,8 @@ func main() {
 	//})
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 
-	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hi")
+	http.HandleFunc("/sa", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Selamun Aleykum")
 	})
 
 	certManager := autocert.Manager{
