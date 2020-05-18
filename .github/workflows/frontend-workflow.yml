@@ -8,7 +8,7 @@ on:
       - "**.css"
 
 jobs:
-  frontend-workflow:
+  run-frontend-workflow:
     runs-on: self-hosted
     steps:
       - name: checkout repo

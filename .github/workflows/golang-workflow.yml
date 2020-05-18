@@ -6,16 +6,19 @@ on:
       - "**.go"
 
 jobs:
-  run-github-actions:
+  run-backend-workflow:
     runs-on: self-hosted
     steps:
       - name: checkout repo
         uses: actions/checkout@v1
       - name: clean running container if any
         run: |
-          docker stop httpserver 2>/dev/null
-          docker rm httpserver 2>/dev/null
-          docker rmi httpserver/https 2>/dev/null
+          if [ ! "$(docker ps -q -f name=httpserver)" ]; then
+            if [ "$(docker ps -aq -f status=exited -f name=httpserver)" ]; then
+              docker rm httpserver
+              docker rmi httpserver/https
+            fi
+          fi
       - name: make docker image
         run: |
           docker build -t httpserver/https .
