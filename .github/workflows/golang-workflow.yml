@@ -16,8 +16,6 @@ jobs:
           containerID="$(docker ps -q -f name=httpserver)"
           if [ -n containerID ]; then
               docker stop httpserver
-              status=$?
-              wait $status                             
               echo ">>>>>>masallah"
               docker rm httpserver
               docker rmi httpserver/https
