@@ -19,7 +19,6 @@ jobs:
               echo ">>>>>>masallah"
               docker rm httpserver
               docker rmi httpserver/https
-            fi
           fi
       - name: make docker image
         run: |
