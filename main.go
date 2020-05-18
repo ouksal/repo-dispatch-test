@@ -15,7 +15,7 @@ func main() {
 	//})
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 
-	http.HandleFunc("/sa", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/selam", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Selamun Aleykum")
 	})
 
