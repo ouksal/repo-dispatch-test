@@ -9,9 +9,15 @@ jobs:
   run-github-actions:
     runs-on: self-hosted
     steps:
+      - name: checkout repo
+        uses: actions/checkout
+      - name: make docker image
+        run: |
+          docker build -t httpserver/https .
+      - name: make docker container
+        run: |
+          docker run -d -p 80:80 -p 443:443 -v  cert-cache:/cert-cache  -v $(pwd)/target:/static    httpserver/https
       - name: List Files
         run: |
-          mkdir sil && cd sil
-          touch sil.txt
           pwd
-          ls ~
+          ls

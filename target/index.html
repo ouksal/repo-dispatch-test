@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: calc(1em+1vmin); /*font-size: 10px;*/
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      body {
+        font-size: 2rem; /*5rem;*/
+        color: white;
+        line-height: 3;
+        text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .box1 {
+        background: #1abc9c;
+      }
+      .box2 {
+        background: #3498db;
+      }
+      .box3 {
+        background: #9b59b6;
+      }
+      .box4 {
+        background: #34495e;
+      }
+      .box5 {
+        background: #f1c40f;
+      }
+      .box6 {
+        background: #e67e22;
+      }
+      .box7 {
+        background: #e74c3c;
+      }
+      .box8 {
+        background: #bdc3c7;
+      }
+      .box9 {
+        background: #2ecc71;
+      }
+      .box10 {
+        background: #16a085;
+      }
+
+      body {
+        height: 100vh;
+      }
+
+      nav {
+        /*outline: 1px solid green;*/
+        padding: 1em;
+
+        max-width: 800px;
+
+        margin: 0 auto;
+      }
+
+      a {
+        display: block; /*imp*/
+        /*padding: .5em 1.5em;*/ /*padding: 20px 40px;*/
+
+        text-align: center;
+
+        margin-bottom: 1em;
+      }
+
+      @media (min-width: 40em) {
+        nav {
+          display: flex;
+          flex-wrap: wrap; /*imp */
+        }
+
+        nav a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          /*make 2 col*/
+          flex: 1 1 calc(50% - 1em);
+        }
+
+        nav a:nth-child(2n) {
+          margin-left: 1em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a
+        class="box6"
+        href="https://www.netflix.com/watch/80102204?trackId=13752289&tctx=0%2C0%2C661e663a6daded254f172778abfc8bc2900f7200%3A9ac613bd69da442f788d226e4f59c9b89fe1121e%2C%2C"
+      >
+        Tony Robbins
+      </a>
+      <a class="box1" href="https://www.youtube.com/watch?v=ZnZKYAmyO7A">
+        English
+      </a>
+      <a class="box2" href="https://youtube.com/watch?v=bj5btO2nvt8">
+        50 English Phrases
+      </a>
+      <a
+        class="box3"
+        href="https://www.youtube.com/channel/UCb-9vRduCM305Nl_XygO6zA/videos"
+      >
+        Felsefe
+      </a>
+      <a class="box4" href="http://kacikprens.blogspot.com/p/arsiv.html">
+        Psikoloji
+      </a>
+      <a
+        class="box5"
+        href="https://www.youtube.com/playlist?list=PL4Kf8PbDAf_N_-sI0Xfn0Rc5LPcRNCDCv"
+      >
+        Kuran
+      </a>
+      <a class="box6" href="https://www.netflix.com/browse">
+        Netflix
+      </a>
+    </nav>
+  </body>
+</html>
